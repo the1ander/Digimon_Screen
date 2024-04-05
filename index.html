@@ -21,9 +21,26 @@
         <div class="counteinerBG">
 
             <div class="card">
+                <section class="findDigimon">
+                    
+                </section>
 
                 <section class="i-logo_digimons">
                     <img src="./src/stryle/script/assets/logodigimon.png" height="70px" alt="Logo Digimon">
+                </section>
+
+                <!-- 
+                -Inserido a sessão buttons, com Rigth e Left button, dentro do card;
+                -Ao mudar o tamanho do botão atençao com o CSS do card (card.height: 550px) para reenquadrar o card novamente;  
+                -->
+                <section Class="buttons">
+                    <div class ="rbutton">
+                        <button> PRÓXIMO </button>
+                    </div>
+
+                    <div class ="lbutton">
+                        <button> ANTERIOR </button>
+                    </div>
                 </section>
 
                 <section class="i-img_digimon">
@@ -34,20 +51,28 @@
                     <p id="t-nomeDigimon"></p>
                 </section>
 
+                <!--Adicionado uma div de atributo númerico em cada info__column: atbHP,atbARK,atbDEF -->
                 <section class="info-atributo_digimon">
                 
                     <div class="a-info__column">
                         <p>HP</p>
                         <div class="barra_hp_externa">
                             <div class="barra_hp_interna" id="hp_interna">
+                                <div class="atbHP">
+                                    <p>10</p>
+                                </div>
                             </div>
                         </div>
+                        
                     </div>
 
                     <div class="a-info__column">
                         <p>ATK</p>
                         <div class="barra_atk_externa">
                             <div class="barra_atk_interna" id="atk_interna">
+                                <div class="atbATK">
+                                    <p>10</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -56,6 +81,9 @@
                         <p>DEF</p>
                         <div class="barra_def_externa" >
                             <div class="barra_def_interna" id="def_interna">
+                                <div class="atbDEF">
+                                    <p>10</p>
+                                </div>
                             </div>
                         </div>
                     </div>
