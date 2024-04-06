@@ -3,7 +3,7 @@
     max-width: 360px;
     margin-top: 5%;
     width: 360px;
-    height: 550px;
+    height: 610px;
     padding: 10px;
     border-radius: 20px;
     background: linear-gradient(to top, rgba(48,179,252,1), rgba(140,213,255,0.1));
@@ -14,6 +14,7 @@
 .i-img_digimon img{
 
 }.i-logo_digimons{
+    margin-top:40px;
     width: 100%;
     display: flex;
     justify-content: center;

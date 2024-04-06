@@ -21,12 +21,20 @@
         <div class="counteinerBG">
 
             <div class="card">
-                <section class="findDigimon">
-                    
+
+                <section class="buscarDigimon">
+                    <input type="text" id="inputBusca" placeholder="digite o ID entre 1 e 16">
+                    <button onclick="buscaDigimon()">Buscar</button>
+                    <div id="resultado"></div>
                 </section>
+                
 
                 <section class="i-logo_digimons">
-                    <img src="./src/stryle/script/assets/logodigimon.png" height="70px" alt="Logo Digimon">
+                    <img src="./src/stryle/script/assets/logodigimon.png" height="60px" alt="Logo Digimon">
+                </section>
+
+                <section class="i-img_digimon">
+                    <img id="imgDigimon" src="" alt="imagem digimons">
                 </section>
 
                 <!-- 
@@ -34,17 +42,10 @@
                 -Ao mudar o tamanho do botão atençao com o CSS do card (card.height: 550px) para reenquadrar o card novamente;  
                 -->
                 <section Class="buttons">
-                    <div class ="rbutton">
-                        <button> PRÓXIMO </button>
+                    <div class ="r-button">
+                        <button id="r-button"> PRÓXIMO </button>
+                        <button id="l-button"> ANTERIOR </button>
                     </div>
-
-                    <div class ="lbutton">
-                        <button> ANTERIOR </button>
-                    </div>
-                </section>
-
-                <section class="i-img_digimon">
-                    <img id="imgDigimon" src="" alt="imagem digimons">
                 </section>
 
                 <section class="t-nome_digimon">
