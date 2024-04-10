@@ -1,0 +1,19 @@
+/* coloca os botões centralizado e espaça eles */
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;  
+}
+
+/* Adiciona fonte e cria um borda arredondada com contorno preto de 1px para os botões */
+.buttons button{
+    font-family: 'Montserrat-bold', sans-serif;
+    font-size: 16px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */ 
+    outline: none;
+}
+

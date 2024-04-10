@@ -1,0 +1,74 @@
+
+/* Estilização de definição padrão da div "card" por completa */
+.card{
+    position: absolute;
+    max-width: 360px;
+    margin-top: 5%;
+    width: 360px;
+    height: 610px;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to top, rgba(48,179,252,1), rgba(140,213,255,0.1));
+    transform: perspective(34em) rotateX(18deg);
+}
+
+.i-logo_digimons{
+    margin:20px 10px 20px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização da imagens que que vai consumido da API  */
+.i-img_digimon img{
+
+}.i-img_digimon{
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
+/* Aplicando efeito de pulsação por tempo na imagem */
+.i-img_digimon img{
+    height: 250px;
+    animation: pulseanimation 1s infinite;
+
+}
+/* @keyframes: Permite criar sequências de animação */
+@keyframes pulseanimation {
+/* Seletores dos quadros em percentual (%) */    
+    0%{
+        transform: scale(1
+        );
+
+    }
+
+    50%{
+        transform: scale(1.1);
+
+    }
+
+    100%{
+        transform: scale(1);
+
+    }
+}
+/* Estilização nome do digimon que vai consumido da API  */
+#t-nomeDigimon {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    padding: 8px 22px;
+}

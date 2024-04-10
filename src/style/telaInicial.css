@@ -1,0 +1,72 @@
+/*.bg_countainer, .ontainer-itens {
+    background-image: url('https://wallpapers.com/images/hd/digimon-background-0c5z28n63449d41g.jpg');
+}
+
+
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+*/
+/* Ajuste tamanho da logo conforme necessário */
+.logo{
+    width:300px ;
+    margin: auto;
+    
+}
+
+/* Correção do nome da classe para bg_container */
+.bg_container, #container-itens {
+    background-image: url('https://wallpapers.com/images/hd/digimon-background-0c5z28n63449d41g.jpg');
+    background-size: cover; /* Garante que o background cubra todo o espaço disponível */
+    
+}
+
+/* Estilização para os itens da lista */
+#container-itens .item {
+    display: inline-block; /* Permite que os itens fiquem lado a lado */
+    margin: 10px; /* Espaçamento entre os itens */
+    padding: 15px; /* Espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo branco com opacidade */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto (nome do Digimon) */
+    vertical-align: top; /* Alinha os itens ao topo */
+    
+}
+
+#container-itens {
+    display: flex; /* Usa flexbox para dispor os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem em uma nova linha quando necessário */
+    justify-content: flex-start; /* Alinha os itens ao início do container */
+    gap: 10px; /* Espaço entre os itens */
+    padding: 10px; /* Espaço interno do container */
+}
+
+.item {
+    flex: 0 1 150px; /* Permite que o item cresça e encolha com uma base de 150px de largura */
+    display: flex; /* Usa flexbox dentro do item */
+    flex-direction: column; /* Organiza o conteúdo em coluna (imagem seguida pelo texto) */
+    align-items: center; /* Centraliza o conteúdo no eixo cruzado (horizontalmente) */
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo branco com opacidade */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar o item */
+    text-align: center; /* Texto centralizado */
+}
+
+.item img {
+    width: 100%; /* A imagem ocupa toda a largura disponível do item */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 5px; /* Espaço entre a imagem e o texto abaixo dela */
+}
+
+.item p {
+    width: 100%; /* O texto ocupa toda a largura do item */
+    overflow: hidden; /* Evita que o texto ultrapasse os limites do item */
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+    white-space: nowrap; /* Impede que o texto quebre em múltiplas linhas */
+}
+
+  
+  

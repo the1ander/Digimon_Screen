@@ -1,0 +1,28 @@
+/*Estilização da sessão buscarDigimon para definir padrão de posição */
+.buscarDigimon {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /*distancia do imput para o botão buscar*/
+    margin-top: 20px;
+    font-family: 'Montserrat-bold', sans-serif;
+    
+}
+
+/*Estilização do imput de texto (digite de 1 a 16) */
+.buscarDigimon input[type="text"] {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px; /* Bordas arredondadas */
+  }
+/*Estilização do botão buscar */
+  .buscarDigimon button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; 
+    border: 2px solid black;
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 10px 10px;
+    cursor: pointer;
+    outline: none;
+  }

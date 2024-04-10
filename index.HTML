@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">   
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style/container_BG.css">
+    <link rel="stylesheet" href="./src/style/reset.css">
+    <link rel="stylesheet" href="./src/style/card.css">
+    <link rel="stylesheet" href="./src/style/buscarDigimon.css">
+    <link rel="stylesheet" href="./src/style/infoDigimons.css">
+    <link rel="stylesheet" href="./src/style/buttons.css">
+
+    <title>Diginons Search</title>
+</head>
+<body>
+<!--Uso de div para conter os elementos externos gerais;
+    Uso de sesctions para conter os elementos específicos-->
+<div class="cointainer">
+    <div class="counteinerBG">
+        <div class="card">
+            <!-- Sessão para buscar a logo do site (fixa)-->
+            <section class="i-logo_digimons">
+                <img src="./src/assets/logodigimon.png" height="60px" alt="Logo Digimon">
+            </section>
+            <!-- Sessão para criar o buscador de digimon por id -->
+            <section class="buscarDigimon">
+                <input type="text" id="inputBusca" placeholder="digite o ID entre 1 e 16">
+                    <button onclick="buscaDigimon()">Buscar</button>
+            </section>
+            <!-- Sessão que vai ser consumida da API-->
+            <section class="i-img_digimon">
+                <img id="imgDigimon" src="" alt="imagem digimons">
+            </section>
+            <!-- Sessão que cria os botões-->
+            <section Class="buttons">
+                <button onclick="buttonAnterior()">ANTERIOR</button>
+                <button onclick="buttonProximo()">PRÓXIMO</button>            
+            </section>
+            <!-- Sessão que cria os botões 
+            p.ID para estilização especial -->
+            <section class="t-nome_digimon">
+                <p id="t-nomeDigimon"></p>
+            </section>
+            <!--div info-atributo_digimo container que contem informação
+                de todos os atributos-->
+            <div class="info-atributo_digimon">
+                <!-- Foi realizado a divisão em 3 divs "a-info__column" para facilitar
+                     a manutenção individual das barras-->
+        
+                <!-- div "a-info__column" 1/3 feita para estilização em grupo -->
+                <div class="a-info__column">
+                    <p>HP</p>
+                        <!--Sessões barra interna/externa HP - separada para estilizar-->
+                        <section class="barra_hp_externa">
+                        <section class="barra_hp_interna" id="hp_interna">
+                            <!--Sessão atbHP para consumir da API-->
+                        <section class="atbHP">
+                            <p>10</p>
+                        </section>
+                        </section>
+                    </section>                   
+                </div>
+                <!-- Sessão "a-info__column" 2/3  -->
+                <div class="a-info__column">
+                    <p>ATK</p>
+                        <!--Sessões barra interna/externa ATK - separada para estilizar-->
+                        <section class="barra_atk_externa">
+                        <section class="barra_atk_interna" id="atk_interna">
+                            <!--Sessão atbATK para consumir da API-->
+                        <section class="atbATK">
+                            <p>10</p>
+                        </section>
+                        </section>
+                    </section>
+                </div>
+                <!-- Sessão "a-info__column" 3/3  -->
+                <div class="a-info__column">
+                    <p>DEF</p>
+                        <!--Sessões barra interna/externa DEF - separada para estilizar-->
+                        <section class="barra_def_externa" >
+                        <section class="barra_def_interna" id="def_interna">
+                            <!--Sessão atbDEF para consumir da API-->
+                        <section class="atbDEF">
+                            <p>10</p>
+                        </section>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Ler script após ler todo HTML E CSS-->
+<script src="./src/script/script.js"></script>
+</body>
+</html>

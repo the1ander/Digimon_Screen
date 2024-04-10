@@ -1,0 +1,7 @@
+/* reseta todas as configurações que vem por padrão nos navegadores, assim evita erro de intrepretação do código */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
