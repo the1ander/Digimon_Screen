@@ -14,7 +14,6 @@ async function getDigimonAPI() {
 }
 
 async function filtroDigimon(digimonId){
-    const digimonList = await getDigimonAPI();
     const digimonStart = await criarItens();
     /*retorna digimonList ,
     aplica um find para buscar a lista de digimon um por um e guarda ela no monster,
@@ -43,12 +42,10 @@ async function criarItens() {
         digimonData.forEach(digimon => {
 
             //Inserir um novo componente do grid layout
-            
-
             const div = document.createElement('div');
             div.classList.add('item'); // para adicionar um elemento para estilização
             const img = document.createElement('img');
-
+            
             const name = document.createElement('p');
             name.textContent = digimon.name;
             div.appendChild(name);
@@ -58,13 +55,10 @@ async function criarItens() {
             div.appendChild(img);
 
 
-            //TORNAR A LISTA RETORNADA CLICAVEL
             
-
-
-            //FAZ COM QUE AO CLICAR NO ITEN DA LISTA SEJA DIRECIONADO PARA TELA Diginons Search
+            //RETORNO PARA TELA Diginons Search
             div.addEventListener('click', () => {
-                window.location.href = '/index.html';
+                window.location.href = `/index.html?id=${digimon.id}`;
         });
         container.appendChild(div);
     });

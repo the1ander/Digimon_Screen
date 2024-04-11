@@ -34,8 +34,14 @@
     border-radius: 35px;
 }
 
-.atbHP{
-
+.atbHP, .atbATK, .atbDEF {
+    position: absolute;
+    background: linear-gradient(to top, rgba(48,179,252,1), rgba(140,213,255,0.5));
+    border-radius: 10px ;
+    height: auto;
+    font-family: 'Montserrat-bold', sans-serif;
+    justify-content: center;
+    padding: 4px 8px; 
 }
 
 /* BARRAS ATK*/

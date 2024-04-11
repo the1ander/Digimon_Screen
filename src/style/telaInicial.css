@@ -10,6 +10,10 @@ header {
 }
 */
 /* Ajuste tamanho da logo conforme necessário */
+header {
+    display: flex;
+    flex-direction: column;
+}
 .logo{
     width:300px ;
     margin: auto;
@@ -17,10 +21,11 @@ header {
 }
 
 /* Correção do nome da classe para bg_container */
-.bg_container, #container-itens {
+.bg_container {
     background-image: url('https://wallpapers.com/images/hd/digimon-background-0c5z28n63449d41g.jpg');
     background-size: cover; /* Garante que o background cubra todo o espaço disponível */
-    
+    height: 100vh;
+    background-repeat: no-repeat ;
 }
 
 /* Estilização para os itens da lista */

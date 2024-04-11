@@ -1,19 +1,22 @@
 
 
+const urlParams = new URLSearchParams(window.location.search);
 
-var selectedDigimon;
-
+// Variável que seleciona para o parametro da url ser o mesmo do digimon selecionado, caso nenhum digimon =1
+var selectedDigimon = urlParams.get('id');
+if(!selectedDigimon){
+    selectedDigimon = 1
+}
 
 // Chamando API e retornar ela em json
 async function getDigimonAPI() {
     const response = await fetch("https://digitalinnovationone.github.io/api-digimon/api/digimon.json");
     
     return await response.json();
-
 }
 // Filtro de busca digimon e conferencia 
 async function filtroDigimon(digimonId){
-    
+
     const digimonList = await getDigimonAPI();
     /*retorna digimonList ,
     aplica um find para buscar a lista de digimon um por um e guarda ela no monster,
@@ -21,12 +24,11 @@ async function filtroDigimon(digimonId){
     return digimonList.find((monster) => monster.id === digimonId)
 }
 
-
 /*  Renderizador (para renderizar as informações no html)
 digimonId = 1 seta o 1º da lista para sempre aparecer*/
-async function renderDigimon(digimonId = 1){
+async function renderDigimon(){
     //O resultado do filtroDigimon / converte id para inteiro
-    const digimon = await filtroDigimon(parseInt(digimonId));
+    const digimon = await filtroDigimon(parseInt(selectedDigimon));
     if(digimon == null) return
     
     //Requisições para renderizar imagen,nome,atributos(HP,ATK e DEF) dos digimons na API
@@ -44,22 +46,18 @@ async function renderDigimon(digimonId = 1){
     hpDigimonElement.style.width = digimon.HP + '%';
     atkDigimonElement.style.width = digimon.ATK + '%';
     defDigimonElement.style.width = digimon.DEF + '%';
-    
-    //seta essa variável apos rodar tudo como o número atual que está o digimon (id)
-    //quando pesquisa outro (esse outro vira o SelectedDimon)
-    selectedDigimon=parseInt(digimonId);
 }
+
 async function buscaDigimon() {
     var inputValue = document.getElementById("inputBusca").value;
     //Mensagem caso não digite número entre 1 e 16
     if(inputValue < 1 || inputValue > 17)
         window.alert("Por favor, insira um valor entre 1 e 16");
     else
-        renderDigimon(inputValue)
+    selectedDigimon = inputValue
+    renderDigimon()
     document.getElementById("inputBusca").value = "";
 }
-
-
 
 //Botão PROXIMO
 async function buttonProximo() {
@@ -81,10 +79,14 @@ async function buttonAnterior() {
     renderDigimon(selectedDigimon);
 }
 
-
 //Função main
 async function main(){
     await renderDigimon();
+    
+    //cria evento do botão ver listagem de dimons
+    document.getElementById('botaoLista').addEventListener('click', function() {
+        window.location.href = 'telaInicial.html';
+    });
     
 }
 

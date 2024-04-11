@@ -1,28 +1,50 @@
 /*Estilização da sessão buscarDigimon para definir padrão de posição */
 .buscarDigimon {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /*distancia do imput para o botão buscar*/
-    margin-top: 20px;
-    font-family: 'Montserrat-bold', sans-serif;
-    
+  display: flex;
+  justify-content: center;
+  gap: 10px; /*distancia do imput para o botão buscar*/
+  margin-top: 20px;
+  font-family: 'Montserrat-bold', sans-serif;
+  
 }
 
 /*Estilização do imput de texto (digite de 1 a 16) */
 .buscarDigimon input[type="text"] {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 20px; /* Bordas arredondadas */
-  }
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px; /* Bordas arredondadas */
+}
 /*Estilização do botão buscar */
-  .buscarDigimon button {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px; 
-    border: 2px solid black;
-    border-radius: 20px; /* Bordas arredondadas */
-    padding: 10px 10px;
-    cursor: pointer;
-    outline: none;
-  }
+.buscarDigimon button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px; 
+  border: 2px solid black;
+  border-radius: 20px; /* Bordas arredondadas */
+  padding: 10px 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.botao-pilula {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to top, rgb(6, 114, 230), rgba(74, 172, 218, 0.5)); /* Cor de fundo */
+  border: none; /* Sem borda */
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  border-radius: 50px; 
+  display: flex; /* Usado para centralizar o ícone e o texto */
+  align-items: center; /* Alinha verticalmente o conteúdo do botão */
+  justify-content: center; /* Alinha horizontalmente o conteúdo do botão */
+  gap: 10px; /* Espaço entre o ícone e o texto */
+  position: relative;
+  top: -230px;
+  color: white;
+}
+
+.botao-pilula:hover {
+  background-color: rgb(6, 114, 230); /* Cor de fundo ao passar o mouse */
+  
+}
